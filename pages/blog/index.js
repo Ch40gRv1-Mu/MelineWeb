@@ -60,6 +60,7 @@ const Blog = ({ posts }) => {
       alert("This thing only works in development mode.");
     }
   };
+  
   return (
     showBlog.current && (
       <>
