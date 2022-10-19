@@ -80,11 +80,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     </Button>
                   )}
 
-                  <Button
-                    onClick={() => window.open("mailto:changruimu@gmail.com")}
-                  >
-                    Contact
-                  </Button>
+                  {showBlog && (
+                    <Button onClick={() => router.push("/edit")}>Edit</Button>
+                  )}
                 </div>
               ) : (
                 <div className="grid grid-cols-1">
@@ -103,11 +101,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     </Button>
                   )}
 
-                  <Button
-                    onClick={() => window.open("mailto:changruimu@gmail.com")}
-                  >
-                    Contact
-                  </Button>
+                  {showBlog && (
+                    <Button onClick={() => router.push("/edit")}>Edit</Button>
+                  )}
                 </div>
               )}
             </Popover.Panel>
@@ -139,9 +135,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:changruimu@gmail.com")}>
-              Contact
-            </Button>
+            {showBlog && (
+              <Button onClick={() => router.push("/edit")}>Edit</Button>
+            )}
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -168,9 +164,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:changruimu@gmail.com")}>
-              Contact
-            </Button>
+            {showResume && (
+              <Button
+                onClick={() => router.push("/")}
+                classes="first:ml-1"
+              >
+                Edit
+              </Button>
+            )}
 
             {mounted && theme && data.darkMode && (
               <Button
