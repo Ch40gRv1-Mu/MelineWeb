@@ -68,7 +68,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <div className="grid grid-cols-1">
                   <Button onClick={handleAboutScroll}>About</Button>
                   {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
+                    <Button onClick={() => router.push("/giftcard")}>Click Here</Button>
                   )}
                   {showResume && (
                     <Button
@@ -76,7 +76,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         window.open("mailto:changruimu@gmail.com")
                       }
                     >
-                      Resume
+                      Edit
                     </Button>
                   )}
 
@@ -91,14 +91,6 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   </Button>
                   {showBlog && (
                     <Button onClick={() => router.push("/giftcard")}>Click Here</Button>
-                  )}
-                  {showResume && (
-                    <Button
-                      onClick={() => router.push("/giftcard")}
-                      classes="first:ml-1"
-                    >
-                      Resume
-                    </Button>
                   )}
 
                   {showBlog && (
